@@ -3,8 +3,28 @@
 <head>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" >
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $.ajax({
+        type:'GET',
+        url: '/data.json',
+        dataType: 'json',
+        success: json.Parser
+    });
+});
     
+function jsonParser(json) {
+    $('#load').fadeOut();
+    $.getJSON('data.json', function(data){
+        $.each(data.paintings.painting, function(k,v){
+            var title = v.title;
+            var image = v.image;
+            var price = v.price;
+            &('#container').append('div class="painting"><image src="images/' + img + '"width="200" height="225" alt=' + title + '" /><br/><div class="title">' + title + '<br/>$' + price + '</div></div>')
+
+        })
+    })
+}
     
 </script>
 
@@ -15,8 +35,9 @@
 
 </head>
 <body>
-<div id="">
- <p>Hello</p>  
+<div id="load"><p>Loading</p></div>
+<div id="container">
+<div class="painting"></div>
 </div>
 
 <input type="text" id="" />

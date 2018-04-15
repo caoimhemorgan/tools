@@ -1,1 +1,11 @@
-{}
+{
+    "paintings": {
+        "painting": [
+         {
+           "title": "Seascape",
+           "artist": "William Turner",
+           "image": "http://www.caoimhemorgan.com/wp-content/uploads/website-design-600x400.png"  
+         }   
+        ]
+    }
+}
