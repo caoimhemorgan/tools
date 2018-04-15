@@ -20,7 +20,7 @@ function jsonParser(json) {
             var title = v.title;
             var image = v.image;
             var price = v.price;
-            $('#container').append('div id="#painting"><image src="images/' + img + '"width="200" height="225" alt=' + title + '" /><br/><div class="title">' + title + '<br/>$' + price + '</div></div>')
+            $('#container').append('div class="painting"><image src="images/' + img + '"width="200" height="225" alt=' + title + '" /><br/><div class="title">' + title + '<br/>$' + price + '</div></div>')
 
         })
     })
@@ -37,7 +37,8 @@ function jsonParser(json) {
 <body>
 <div id="load"><p>Loading</p></div>
 <div id="container">
-<div id="painting"></div>
+<div class="painting"></div>
+<div class="title"></div>
 </div>
 
 <input type="text" id="" />
