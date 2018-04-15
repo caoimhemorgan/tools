@@ -7,7 +7,7 @@
 $(document).ready(function(){
     $.ajax({
         type:'GET',
-        url: './data.json',
+        url: 'https://caoimhe.herokuapp.com/data.json',
         dataType: 'json',
         success: json.Parser
     });
@@ -15,7 +15,7 @@ $(document).ready(function(){
     
 function jsonParser(json) {
     $('#load').fadeOut();
-    $.getJSON('data.json', function(data){
+    $.getJSON('https://caoimhe.herokuapp.com/data.json', function(data){
         $.each(data.paintings.painting, function(k,v){
             var title = v.title;
             var image = v.image;
