@@ -20,7 +20,7 @@ function jsonParser(json) {
             var title = v.title;
             var image = v.image;
             var artist = v.artist;
-            $('#container').append('div class="painting"><br/><div class="title">' + title + artist + '</div></div>')
+            $('#container').append('<div class="title">' + title + " by " + artist + '</div></div>')
 
         })
     })
