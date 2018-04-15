@@ -20,7 +20,7 @@ function jsonParser(json) {
             var title = v.title;
             var image = v.image;
             var price = v.price;
-            $('#container').append('div class="painting"><image src="http://www.caoimhemorgan.com/wp-content/uploads/website-design-600x400.png' + img + '"width="200" height="225" alt=' + title + '" /><br/><div class="title">' + title + '<br/>$' + price + '</div></div>')
+            $('#container').append('<div class="title">' + title + '<br/>$' + price + '</div></div>')
 
         })
     })
