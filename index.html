@@ -19,7 +19,7 @@ function jsonParser(json) {
         $.each(data.paintings.painting, function(k,v){
             var title = v.title;
             var image = v.image;
-            var price = v.price;
+            var artist = v.artist;
             $('#container').append('div class="painting"><br/><div class="title">' + title + '<br/>$' + artist + '</div></div>')
 
         })
