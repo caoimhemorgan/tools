@@ -43,16 +43,16 @@ function jsonParser(json) {
       
      
 
-      var getFlavour = localStorage.getItem('favouriteflavour');
+      var yourName = localStorage.getItem('btnYourName');
 
-       $('#messagePanel').empty().append(getFlavour);
+       $('#messagePanel').empty().append(yourName);
 
-       $('#btnfavouriteflavour').on('click', function () {
-           console.log("saving fav flavour");
-           var favFlavour = $('#tbfavouriteflavour').val()
-           localStorage.setItem('favouriteflavour',favFlavour);
+       $('#btnYourName').on('click', function () {
+           console.log("Your name has been saved to local storage");
+           var yourName = $('#yournametyped').val()
+           localStorage.setItem('btnYourName',yourName);
 
-       } )
+       } );
 
 
 
@@ -82,8 +82,9 @@ This is my content.
 </div>
 </p>
 <div id="messagePanel">This is a message and again</div>
-<input type="text" id="tbfavouriteflavour" />
-<button id="btnfavouriteflavour">Set Flavour</button>
+<input type="text" id="yournametyped" />
+<button id="btnYourName">Your Name</button>
+<button id="yourResult">Your Name</button>
 
 </body>
 </html>
