@@ -43,7 +43,7 @@ function jsonParser(json) {
       
      
 
-      var yourName = localStorage.getItem('btnYourName');
+      
 
        $('#messagePanel').empty().append(yourName);
 
@@ -51,6 +51,12 @@ function jsonParser(json) {
            console.log("Your name has been saved to local storage");
            var yourName = $('#yournametyped').val()
            localStorage.setItem('btnYourName',yourName);
+
+       } );
+
+       $('#yourResult').on('click', function () {
+           console.log("Your result clicked");
+           var yourName = localStorage.getItem('btnYourName');
 
        } );
 
@@ -84,7 +90,7 @@ This is my content.
 <div id="messagePanel">This is a message and again</div>
 <input type="text" id="yournametyped" />
 <button id="btnYourName">Your Name</button>
-<button id="yourResult">Your Name</button>
+<button id="yourResult">Your Result</button>
 
 </body>
 </html>
