@@ -24,12 +24,20 @@ function jsonParser(json) {
 
         })
     })
-}
-    
+};
+
+ 
+ $('#myBtn').fadeIn();
+     
+    $('#myBtn').click(function(){
+        $('myBtnShowContainer').show();
+    });
+
 </script>
 
 <style>
-
+#myBtn { background-color: whitesmoke; width: 300px; box-shadow: 1px 1px 1px 1px; }
+.myBtnShowContainer { background-color: whitesmoke; padding: 10px; display: none; }
 
 </style>
 
@@ -42,7 +50,11 @@ function jsonParser(json) {
 <div class="artist"></div>
 </div></div>
 
-<input type="text" id="" />
+<input type="text" id="name" />
+<button id = "myBTN">Show details here</button>
+<div class="myBtnShowContainer">
+This is my content.
+</div>
 
 
 
