@@ -5,7 +5,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script type="text/javascript">
 
-     $(document).ready(function(){
+     
         $('#myBtn').click(function(){
  $('myBtnShowContainer').hide();
  });
@@ -32,9 +32,10 @@ function jsonParser(json) {
             var artist = v.artist;
             $('#container').append('<div class="title">' + title + " by " + artist + '</div></div>')
 
-        })
-    })
+        });
+    });
 };
+
 
 
 
