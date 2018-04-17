@@ -5,6 +5,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script type="text/javascript">
 
+ $( function () {
      
         $('#myBtn').click(function(){
  $('myBtnShowContainer').hide();
@@ -13,6 +14,7 @@
     $('#myBtn').click(function(){
         $('myBtnShowContainer').show();
     });
+});
 
 $(document).ready(function(){
     $.ajax({
@@ -37,7 +39,24 @@ function jsonParser(json) {
 };
 
 
+  $( function () {
+      
+     
 
+      var getFlavour = localStorage.getItem('favouriteflavour');
+
+       $('#messagePanel').empty().append(getFlavour);
+
+       $('#btnfavouriteflavour').on('click', function () {
+           console.log("saving fav flavour");
+           var favFlavour = $('#tbfavouriteflavour').val()
+           localStorage.setItem('favouriteflavour',favFlavour);
+
+       } )
+
+
+
+   } ); // end jquery load 
 
 </script>
 
@@ -61,8 +80,10 @@ function jsonParser(json) {
 <div class="myBtnShowContainer">
 This is my content.
 </div>
-
-
+</p>
+<div id="messagePanel">This is a message and again</div>
+<input type="text" id="tbfavouriteflavour" />
+<button id="btnfavouriteflavour">Set Flavour</button>
 
 </body>
 </html>
