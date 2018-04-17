@@ -58,11 +58,17 @@ function jsonParser(json) {
 
    } ); // end jquery load
 
+   $(document).ready(function () {
+    $("#myBtn").click(function () {
+        $("#myBtnShowContainer").toggle();
+    });
+});
+
 </script>
 
 <style>
 #myBtn { background-color: whitesmoke; width: 300px; box-shadow: 1px 1px 1px 1px; }
-.myBtnShowContainer { background-color: whitesmoke; padding: 10px; }
+#myBtnShowContainer { background-color: whitesmoke; padding: 10px; display: none; }
 
 </style>
 
@@ -78,7 +84,7 @@ function jsonParser(json) {
 <input type="text" id="name" />
 <button id = "myBtn">Show details here</button>
 <div class="myBtnShowContainer">
-This is my content.
+This is my content from the button.
 </div>
 </p>
 <div id="messagePanel">This is a message and again</div>
