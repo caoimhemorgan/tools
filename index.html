@@ -39,30 +39,24 @@ function jsonParser(json) {
 };
 
 
-  $( function () {
+   $( function () {
       
      
 
-      
+      var getFlavour = localStorage.getItem('favouriteflavour');
 
-       $('#messagePanel').empty().append(btnYourName);
+       $('#messagePanel').empty().append(getFlavour);
 
-       $('#btnYourName').on('click', function () {
-           console.log("Your name has been saved to local storage");
-           var yourName = $('#yournametyped').val()
-           localStorage.setItem('btnYourName',yourName);
+       $('#btnfavouriteflavour').on('click', function () {
+           console.log("saving fav flavour");
+           var favFlavour = $('#tbfavouriteflavour').val()
+           localStorage.setItem('favouriteflavour',favFlavour);
 
-       } );
-
-       $('#yourResult').on('click', function () {
-           console.log("Your result clicked");
-           $('#yournametyped').html();
-
-       } );
+       } )
 
 
 
-   } ); // end jquery load 
+   } ); // end jquery load
 
 </script>
 
@@ -88,9 +82,10 @@ This is my content.
 </div>
 </p>
 <div id="messagePanel">This is a message and again</div>
-<input type="text" id="yournametyped" />
-<button id="btnYourName">Your Name</button>
-<button id="yourResult">Your Result</button>
+<input type="text" id="tbfavouriteflavour" />
+<button id="btnfavouriteflavour">Set Flavour</button>
+
+
 
 </body>
 </html>
