@@ -28,6 +28,7 @@ function jsonParser(json) {
 
  $(document).ready(function(){
  $('#myBtn').fadeIn();
+ $('myBtnShowContainer').hide();
  });
      
     $('#myBtn').click(function(){
@@ -38,7 +39,7 @@ function jsonParser(json) {
 
 <style>
 #myBtn { background-color: whitesmoke; width: 300px; box-shadow: 1px 1px 1px 1px; }
-.myBtnShowContainer { background-color: whitesmoke; padding: 10px; display: none; }
+.myBtnShowContainer { background-color: whitesmoke; padding: 10px; }
 
 </style>
 
@@ -52,7 +53,7 @@ function jsonParser(json) {
 </div></div>
 
 <input type="text" id="name" />
-<button id = "myBTN">Show details here</button>
+<button id = "myBtn">Show details here</button>
 <div class="myBtnShowContainer">
 This is my content.
 </div>
